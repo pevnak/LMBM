@@ -1,8 +1,8 @@
 # LMBM
 
-LMBM is a limited memory bundle method for general, possible nonconvex, nonsmooth (nondifferentiable) large-scale minimization. Both the unconsrained version of the method and the version for bound constrained problems are available. You can also use the code LDGB as Fortran 95 version of LMBM (unconstrained case). Due to some implementational facts it might use less subgradient evaluations than the version here.
+This is an interface to the library implemeting Limited Memory Bundle Method taken from http://napsu.karmitsa.fi/lmbm/ allowing the library to be called from Julia. The original Fortran code is located in deps directory and I have just created a wrapper arounf it. Look in test directory to see, how to use it. Please, visit the original page for license or question for permissions. Note that the original fortran code is included in deps. Below is the coped text from Napsu Karmitsa's webpage.
 
-The code is taken from http://napsu.karmitsa.fi/lmbm/ and I have just a wrapper such that it can be called from Julia. Please, visit the original page for license or question for permissions. Note that the original fortran code is included in deps.
+LMBM is a limited memory bundle method for general, possible nonconvex, nonsmooth (nondifferentiable) large-scale minimization. Both the unconsrained version of the method and the version for bound constrained problems are available. You can also use the code LDGB as Fortran 95 version of LMBM (unconstrained case). Due to some implementational facts it might use less subgradient evaluations than the version here.
 
 If you use the method in research work, you should mention one of the following papers
 References
