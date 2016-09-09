@@ -69,6 +69,7 @@ function lmbm(optFun::Function,x::Array{Float64};na::Int=2,mcu::Int=7,printinfo:
   ccall((:set_obj_func,liblmbm),Void,(Ptr{Void},),fOptPtr)
 
   ipar=convert(Array{Cint},[0,5000000,5000000,0,-1,0,0])
+  ipar[5]=4
   rpar=convert(Array{Cdouble},[0,0,0,1e-5,1e-3,0.5,0.01,2])
   
   maxtime = convert(Cfloat,maxtime);
