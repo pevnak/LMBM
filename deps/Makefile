@@ -1,4 +1,4 @@
-FF = gfortran -O2
+FF = gfortran -O2 -fPIC
 CC = gcc
 
 all: shared_lib
