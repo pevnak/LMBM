@@ -37,7 +37,7 @@ end
 function writeDeps()
     libpath = joinpath(currentDirPath, "liblmbm.so")
     outputfile = open(joinpath(currentDirPath, "deps.jl"), "w");
-    write( outputfile, "macro checked_lib(libname, path)\n    (Libdl.dlopen_e(path) == C_NULL) && error(\"Unable to load \\n\\n\$libname (\$path)\n\nPlease re-run Pkg.build(package), and restart Julia.\")\n    quote const \$(esc(libname)) = \$path end\nend\n@checked_lib liblbfgsbf \"$(libpath)\"\n")
+    write( outputfile, "macro checked_lib(libname, path)\n    (Libdl.dlopen_e(path) == C_NULL) && error(\"Unable to load \\n\\n\$libname (\$path)\n\nPlease re-run Pkg.build(package), and restart Julia.\")\n    quote const \$(esc(libname)) = \$path end\nend\n@checked_lib liblmbm \"$(libpath)\"\n")
     close(outputfile)
 end
 
